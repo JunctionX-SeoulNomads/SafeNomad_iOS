@@ -14,6 +14,9 @@
 		2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B57265902D60027C824 /* NomadModel.swift */; };
 		2D1B3B5D265902E10027C824 /* DriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B5C265902E10027C824 /* DriverViewModel.swift */; };
 		2D1B3B62265902F10027C824 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B61265902F10027C824 /* DriverModel.swift */; };
+		2D5FD497265959010000F9D8 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FD496265959010000F9D8 /* ReportViewController.swift */; };
+		2D5FD49F2659590C0000F9D8 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FD49E2659590C0000F9D8 /* ReportViewModel.swift */; };
+		2D5FD4A4265959160000F9D8 /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5FD4A3265959160000F9D8 /* ReportModel.swift */; };
 		2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA132658D8A500A4D823 /* AppDelegate.swift */; };
 		2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */; };
 		2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA172658D8A500A4D823 /* ViewController.swift */; };
@@ -58,6 +61,9 @@
 		2D1B3B57265902D60027C824 /* NomadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadModel.swift; sourceTree = "<group>"; };
 		2D1B3B5C265902E10027C824 /* DriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewModel.swift; sourceTree = "<group>"; };
 		2D1B3B61265902F10027C824 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
+		2D5FD496265959010000F9D8 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		2D5FD49E2659590C0000F9D8 /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		2D5FD4A3265959160000F9D8 /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
 		2D7CFA102658D8A500A4D823 /* SafeNomad_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeNomad_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7CFA132658D8A500A4D823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,11 +132,22 @@
 		2D1B3B342658E6B10027C824 /* Nomad */ = {
 			isa = PBXGroup;
 			children = (
+				2D5FD495265958ED0000F9D8 /* Report */,
 				2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */,
 				2D1B3B52265902CE0027C824 /* NomadViewModel.swift */,
 				2D1B3B57265902D60027C824 /* NomadModel.swift */,
 			);
 			path = Nomad;
+			sourceTree = "<group>";
+		};
+		2D5FD495265958ED0000F9D8 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				2D5FD496265959010000F9D8 /* ReportViewController.swift */,
+				2D5FD49E2659590C0000F9D8 /* ReportViewModel.swift */,
+				2D5FD4A3265959160000F9D8 /* ReportModel.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		2D7CFA072658D8A500A4D823 = {
@@ -479,11 +496,14 @@
 				2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */,
 				2D1B3B53265902CE0027C824 /* NomadViewModel.swift in Sources */,
 				2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */,
+				2D5FD49F2659590C0000F9D8 /* ReportViewModel.swift in Sources */,
+				2D5FD497265959010000F9D8 /* ReportViewController.swift in Sources */,
 				2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */,
 				2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */,
 				2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */,
 				2D7CFA502658DAB700A4D823 /* MainModel.swift in Sources */,
 				2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */,
+				2D5FD4A4265959160000F9D8 /* ReportModel.swift in Sources */,
 				2D7CFA482658DAA800A4D823 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
