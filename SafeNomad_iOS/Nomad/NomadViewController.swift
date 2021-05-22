@@ -59,11 +59,9 @@ class NomadViewController: UIViewController {
         self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(shareLocation), userInfo: nil, repeats: true)
     }
     @objc func shareLocation(){
-        print("did called")
         let requestBody = updateLocation()
         if self.isFirst{
             self.viewModel.sendCurrentLocation(with: requestBody)
-            print("sent at first")
             self.isFirst = false
             self.previousLocation = CLLocation(latitude: requestBody.latitude, longitude: requestBody.longitude)
         }else{
@@ -72,7 +70,6 @@ class NomadViewController: UIViewController {
             guard distanceInMeters > 5 else {
                 return
             }
-            print("sent")
             self.viewModel.sendCurrentLocation(with: requestBody)
         }
     }
