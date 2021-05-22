@@ -12,7 +12,7 @@ class NomadViewController: UIViewController {
     var gameTimer: Timer?
     var locManager = CLLocationManager()
     var currentLocation = CLLocation()
-
+    var viewModel = NomadViewModel()
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.setTimer()
@@ -20,6 +20,7 @@ class NomadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        viewModel.delegate = self
         setLocation()
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -31,12 +32,13 @@ class NomadViewController: UIViewController {
     }
     @objc func shareLocation(){
         print("did called")
-        updateLocation()
+        var requestBody = updateLocation()
+        self.viewModel.sendCurrentLocation(with: requestBody)
     }
     private func setLocation(){
         locManager.requestWhenInUseAuthorization()
     }
-    private func updateLocation(){
+    private func updateLocation() -> LocationRequest{
         if
            CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
            CLLocationManager.authorizationStatus() ==  .authorizedAlways
@@ -45,5 +47,18 @@ class NomadViewController: UIViewController {
         }
         print(currentLocation.coordinate.longitude)
         print(currentLocation.coordinate.latitude)
+        return LocationRequest(latitude: currentLocation.coordinate.longitude, longitude: currentLocation.coordinate.latitude)
+    }
+}
+extension NomadViewController: NomadViewModelDelegate{
+    func showCritical() {
+        print("critical")
+    }
+    func showMedium() {
+        print("medium")
+        
+    }
+    func showNormal() {
+        print("normal")
     }
 }

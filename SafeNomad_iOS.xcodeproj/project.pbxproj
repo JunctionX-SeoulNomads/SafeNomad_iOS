@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */; };
 		2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B352658E6C20027C824 /* DriverViewController.swift */; };
 		2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */; };
+		2D1B3B53265902CE0027C824 /* NomadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B52265902CE0027C824 /* NomadViewModel.swift */; };
+		2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B57265902D60027C824 /* NomadModel.swift */; };
+		2D1B3B5D265902E10027C824 /* DriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B5C265902E10027C824 /* DriverViewModel.swift */; };
+		2D1B3B62265902F10027C824 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B61265902F10027C824 /* DriverModel.swift */; };
 		2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA132658D8A500A4D823 /* AppDelegate.swift */; };
 		2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */; };
 		2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA172658D8A500A4D823 /* ViewController.swift */; };
@@ -50,6 +54,10 @@
 		2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 		2D1B3B352658E6C20027C824 /* DriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
 		2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadViewController.swift; sourceTree = "<group>"; };
+		2D1B3B52265902CE0027C824 /* NomadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadViewModel.swift; sourceTree = "<group>"; };
+		2D1B3B57265902D60027C824 /* NomadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadModel.swift; sourceTree = "<group>"; };
+		2D1B3B5C265902E10027C824 /* DriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewModel.swift; sourceTree = "<group>"; };
+		2D1B3B61265902F10027C824 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
 		2D7CFA102658D8A500A4D823 /* SafeNomad_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeNomad_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7CFA132658D8A500A4D823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				2D1B3B352658E6C20027C824 /* DriverViewController.swift */,
+				2D1B3B5C265902E10027C824 /* DriverViewModel.swift */,
+				2D1B3B61265902F10027C824 /* DriverModel.swift */,
 			);
 			path = Driver;
 			sourceTree = "<group>";
@@ -117,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */,
+				2D1B3B52265902CE0027C824 /* NomadViewModel.swift */,
+				2D1B3B57265902D60027C824 /* NomadModel.swift */,
 			);
 			path = Nomad;
 			sourceTree = "<group>";
@@ -125,8 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				2D7CFA122658D8A500A4D823 /* SafeNomad_iOS */,
-				2D1B3B332658E6A60027C824 /* Driver */,
-				2D1B3B342658E6B10027C824 /* Nomad */,
 				2D7CFA292658D8A600A4D823 /* SafeNomad_iOSTests */,
 				2D7CFA342658D8A700A4D823 /* SafeNomad_iOSUITests */,
 				2D7CFA112658D8A500A4D823 /* Products */,
@@ -155,6 +165,8 @@
 				2D7CFA1C2658D8A600A4D823 /* Assets.xcassets */,
 				2D7CFA1E2658D8A600A4D823 /* LaunchScreen.storyboard */,
 				2D7CFA212658D8A600A4D823 /* Info.plist */,
+				2D1B3B342658E6B10027C824 /* Nomad */,
+				2D1B3B332658E6A60027C824 /* Driver */,
 				2D7CFA592658DAFE00A4D823 /* Global */,
 				2D7CFA462658DA9600A4D823 /* Main */,
 			);
@@ -208,7 +220,6 @@
 				1C4BAF68E22D29581420FBC7 /* Pods-SafeNomad_iOSTests.debug.xcconfig */,
 				38346BAD923E1A38BEA11219 /* Pods-SafeNomad_iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -461,8 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */,
+				2D1B3B5D265902E10027C824 /* DriverViewModel.swift in Sources */,
 				2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */,
+				2D1B3B62265902F10027C824 /* DriverModel.swift in Sources */,
 				2D7CFA552658DAF300A4D823 /* MainViewModel.swift in Sources */,
+				2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */,
+				2D1B3B53265902CE0027C824 /* NomadViewModel.swift in Sources */,
 				2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */,
 				2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */,
 				2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */,
