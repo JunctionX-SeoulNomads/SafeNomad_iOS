@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */; };
+		2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B352658E6C20027C824 /* DriverViewController.swift */; };
+		2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */; };
+		2D1B3B53265902CE0027C824 /* NomadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B52265902CE0027C824 /* NomadViewModel.swift */; };
+		2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B57265902D60027C824 /* NomadModel.swift */; };
+		2D1B3B5D265902E10027C824 /* DriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B5C265902E10027C824 /* DriverViewModel.swift */; };
+		2D1B3B62265902F10027C824 /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B61265902F10027C824 /* DriverModel.swift */; };
 		2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA132658D8A500A4D823 /* AppDelegate.swift */; };
 		2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */; };
 		2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA172658D8A500A4D823 /* ViewController.swift */; };
@@ -17,8 +24,11 @@
 		2D7CFA362658D8A700A4D823 /* SafeNomad_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA352658D8A700A4D823 /* SafeNomad_iOSUITests.swift */; };
 		2D7CFA482658DAA800A4D823 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA472658DAA800A4D823 /* MainViewController.swift */; };
 		2D7CFA502658DAB700A4D823 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA4F2658DAB700A4D823 /* MainModel.swift */; };
-		2D7CFA552658DAF300A4D823 /* MainModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA542658DAF300A4D823 /* MainModelView.swift */; };
+		2D7CFA552658DAF300A4D823 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA542658DAF300A4D823 /* MainViewModel.swift */; };
 		2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */; };
+		8030BC2C4C07DCD54693478E /* Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949B65B7866BF857AB68017D /* Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework */; };
+		C5010F2D125A3872D09AF187 /* Pods_SafeNomad_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D367884AA5F96FAB4FC9EF /* Pods_SafeNomad_iOSTests.framework */; };
+		C652B526FCC49ADBC6B3F1B0 /* Pods_SafeNomad_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6090C5E34B9AC9F6B5AD8D46 /* Pods_SafeNomad_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B8B60A2E6BC21B3BBE8FAB5 /* Pods-SafeNomad_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOS.release.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOS/Pods-SafeNomad_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1C4BAF68E22D29581420FBC7 /* Pods-SafeNomad_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOSTests/Pods-SafeNomad_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
+		2D1B3B352658E6C20027C824 /* DriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
+		2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadViewController.swift; sourceTree = "<group>"; };
+		2D1B3B52265902CE0027C824 /* NomadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadViewModel.swift; sourceTree = "<group>"; };
+		2D1B3B57265902D60027C824 /* NomadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadModel.swift; sourceTree = "<group>"; };
+		2D1B3B5C265902E10027C824 /* DriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewModel.swift; sourceTree = "<group>"; };
+		2D1B3B61265902F10027C824 /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
 		2D7CFA102658D8A500A4D823 /* SafeNomad_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeNomad_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7CFA132658D8A500A4D823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +74,15 @@
 		2D7CFA372658D8A700A4D823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7CFA472658DAA800A4D823 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2D7CFA4F2658DAB700A4D823 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
-		2D7CFA542658DAF300A4D823 /* MainModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelView.swift; sourceTree = "<group>"; };
+		2D7CFA542658DAF300A4D823 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAuth.swift; sourceTree = "<group>"; };
+		38346BAD923E1A38BEA11219 /* Pods-SafeNomad_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOSTests/Pods-SafeNomad_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		53B1D70EADD245A1DF2265D8 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOS-SafeNomad_iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOS-SafeNomad_iOSUITests/Pods-SafeNomad_iOS-SafeNomad_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6090C5E34B9AC9F6B5AD8D46 /* Pods_SafeNomad_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeNomad_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F78D9A93C628309B0CD1281 /* Pods-SafeNomad_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOS.debug.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOS/Pods-SafeNomad_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		949B65B7866BF857AB68017D /* Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67FC8A2B62093B8DC6D44A2 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeNomad_iOS-SafeNomad_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-SafeNomad_iOS-SafeNomad_iOSUITests/Pods-SafeNomad_iOS-SafeNomad_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F2D367884AA5F96FAB4FC9EF /* Pods_SafeNomad_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeNomad_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C652B526FCC49ADBC6B3F1B0 /* Pods_SafeNomad_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5010F2D125A3872D09AF187 /* Pods_SafeNomad_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +106,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8030BC2C4C07DCD54693478E /* Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1B3B332658E6A60027C824 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B3B352658E6C20027C824 /* DriverViewController.swift */,
+				2D1B3B5C265902E10027C824 /* DriverViewModel.swift */,
+				2D1B3B61265902F10027C824 /* DriverModel.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		2D1B3B342658E6B10027C824 /* Nomad */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */,
+				2D1B3B52265902CE0027C824 /* NomadViewModel.swift */,
+				2D1B3B57265902D60027C824 /* NomadModel.swift */,
+			);
+			path = Nomad;
+			sourceTree = "<group>";
+		};
 		2D7CFA072658D8A500A4D823 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +140,8 @@
 				2D7CFA292658D8A600A4D823 /* SafeNomad_iOSTests */,
 				2D7CFA342658D8A700A4D823 /* SafeNomad_iOSUITests */,
 				2D7CFA112658D8A500A4D823 /* Products */,
+				3B15A854974C5660B61F33D5 /* Pods */,
+				EFC7E50B4B0053DA0CF6C611 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +165,8 @@
 				2D7CFA1C2658D8A600A4D823 /* Assets.xcassets */,
 				2D7CFA1E2658D8A600A4D823 /* LaunchScreen.storyboard */,
 				2D7CFA212658D8A600A4D823 /* Info.plist */,
+				2D1B3B342658E6B10027C824 /* Nomad */,
+				2D1B3B332658E6A60027C824 /* Driver */,
 				2D7CFA592658DAFE00A4D823 /* Global */,
 				2D7CFA462658DA9600A4D823 /* Main */,
 			);
@@ -143,7 +196,7 @@
 			children = (
 				2D7CFA472658DAA800A4D823 /* MainViewController.swift */,
 				2D7CFA4F2658DAB700A4D823 /* MainModel.swift */,
-				2D7CFA542658DAF300A4D823 /* MainModelView.swift */,
+				2D7CFA542658DAF300A4D823 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -152,8 +205,32 @@
 			isa = PBXGroup;
 			children = (
 				2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */,
+				2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		3B15A854974C5660B61F33D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F78D9A93C628309B0CD1281 /* Pods-SafeNomad_iOS.debug.xcconfig */,
+				1B8B60A2E6BC21B3BBE8FAB5 /* Pods-SafeNomad_iOS.release.xcconfig */,
+				53B1D70EADD245A1DF2265D8 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.debug.xcconfig */,
+				D67FC8A2B62093B8DC6D44A2 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.release.xcconfig */,
+				1C4BAF68E22D29581420FBC7 /* Pods-SafeNomad_iOSTests.debug.xcconfig */,
+				38346BAD923E1A38BEA11219 /* Pods-SafeNomad_iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFC7E50B4B0053DA0CF6C611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6090C5E34B9AC9F6B5AD8D46 /* Pods_SafeNomad_iOS.framework */,
+				949B65B7866BF857AB68017D /* Pods_SafeNomad_iOS_SafeNomad_iOSUITests.framework */,
+				F2D367884AA5F96FAB4FC9EF /* Pods_SafeNomad_iOSTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7CFA3A2658D8A700A4D823 /* Build configuration list for PBXNativeTarget "SafeNomad_iOS" */;
 			buildPhases = (
+				62520AF873DC93874907192D /* [CP] Check Pods Manifest.lock */,
 				2D7CFA0C2658D8A500A4D823 /* Sources */,
 				2D7CFA0D2658D8A500A4D823 /* Frameworks */,
 				2D7CFA0E2658D8A500A4D823 /* Resources */,
+				B8599DE7A1D575300D7DEECC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +259,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7CFA3D2658D8A700A4D823 /* Build configuration list for PBXNativeTarget "SafeNomad_iOSTests" */;
 			buildPhases = (
+				9B10221A009943828211C9D7 /* [CP] Check Pods Manifest.lock */,
 				2D7CFA222658D8A600A4D823 /* Sources */,
 				2D7CFA232658D8A600A4D823 /* Frameworks */,
 				2D7CFA242658D8A600A4D823 /* Resources */,
@@ -198,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7CFA402658D8A700A4D823 /* Build configuration list for PBXNativeTarget "SafeNomad_iOSUITests" */;
 			buildPhases = (
+				7A20948D530A21F09B30441C /* [CP] Check Pods Manifest.lock */,
 				2D7CFA2D2658D8A700A4D823 /* Sources */,
 				2D7CFA2E2658D8A700A4D823 /* Frameworks */,
 				2D7CFA2F2658D8A700A4D823 /* Resources */,
+				D556A4FB96B33D0AC74B3583 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,17 +363,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		62520AF873DC93874907192D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeNomad_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A20948D530A21F09B30441C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeNomad_iOS-SafeNomad_iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B10221A009943828211C9D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeNomad_iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8599DE7A1D575300D7DEECC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS/Pods-SafeNomad_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS/Pods-SafeNomad_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS/Pods-SafeNomad_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D556A4FB96B33D0AC74B3583 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS-SafeNomad_iOSUITests/Pods-SafeNomad_iOS-SafeNomad_iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS-SafeNomad_iOSUITests/Pods-SafeNomad_iOS-SafeNomad_iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafeNomad_iOS-SafeNomad_iOSUITests/Pods-SafeNomad_iOS-SafeNomad_iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D7CFA0C2658D8A500A4D823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */,
+				2D1B3B5D265902E10027C824 /* DriverViewModel.swift in Sources */,
 				2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */,
-				2D7CFA552658DAF300A4D823 /* MainModelView.swift in Sources */,
+				2D1B3B62265902F10027C824 /* DriverModel.swift in Sources */,
+				2D7CFA552658DAF300A4D823 /* MainViewModel.swift in Sources */,
+				2D1B3B58265902D60027C824 /* NomadModel.swift in Sources */,
+				2D1B3B53265902CE0027C824 /* NomadViewModel.swift in Sources */,
 				2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */,
 				2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */,
 				2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */,
+				2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */,
 				2D7CFA502658DAB700A4D823 /* MainModel.swift in Sources */,
+				2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */,
 				2D7CFA482658DAA800A4D823 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +657,7 @@
 		};
 		2D7CFA3B2658D8A700A4D823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F78D9A93C628309B0CD1281 /* Pods-SafeNomad_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -484,6 +677,7 @@
 		};
 		2D7CFA3C2658D8A700A4D823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8B60A2E6BC21B3BBE8FAB5 /* Pods-SafeNomad_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +697,7 @@
 		};
 		2D7CFA3E2658D8A700A4D823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C4BAF68E22D29581420FBC7 /* Pods-SafeNomad_iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +720,7 @@
 		};
 		2D7CFA3F2658D8A700A4D823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38346BAD923E1A38BEA11219 /* Pods-SafeNomad_iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -547,6 +743,7 @@
 		};
 		2D7CFA412658D8A700A4D823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53B1D70EADD245A1DF2265D8 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +764,7 @@
 		};
 		2D7CFA422658D8A700A4D823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D67FC8A2B62093B8DC6D44A2 /* Pods-SafeNomad_iOS-SafeNomad_iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
