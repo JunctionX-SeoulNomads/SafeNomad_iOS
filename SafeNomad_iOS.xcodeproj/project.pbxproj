@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */; };
+		2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B352658E6C20027C824 /* DriverViewController.swift */; };
+		2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */; };
 		2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA132658D8A500A4D823 /* AppDelegate.swift */; };
 		2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */; };
 		2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA172658D8A500A4D823 /* ViewController.swift */; };
@@ -17,7 +20,7 @@
 		2D7CFA362658D8A700A4D823 /* SafeNomad_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA352658D8A700A4D823 /* SafeNomad_iOSUITests.swift */; };
 		2D7CFA482658DAA800A4D823 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA472658DAA800A4D823 /* MainViewController.swift */; };
 		2D7CFA502658DAB700A4D823 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA4F2658DAB700A4D823 /* MainModel.swift */; };
-		2D7CFA552658DAF300A4D823 /* MainModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA542658DAF300A4D823 /* MainModelView.swift */; };
+		2D7CFA552658DAF300A4D823 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA542658DAF300A4D823 /* MainViewModel.swift */; };
 		2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
+		2D1B3B352658E6C20027C824 /* DriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
+		2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadViewController.swift; sourceTree = "<group>"; };
 		2D7CFA102658D8A500A4D823 /* SafeNomad_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeNomad_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7CFA132658D8A500A4D823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7CFA152658D8A500A4D823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +61,7 @@
 		2D7CFA372658D8A700A4D823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7CFA472658DAA800A4D823 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2D7CFA4F2658DAB700A4D823 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
-		2D7CFA542658DAF300A4D823 /* MainModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelView.swift; sourceTree = "<group>"; };
+		2D7CFA542658DAF300A4D823 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1B3B332658E6A60027C824 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B3B352658E6C20027C824 /* DriverViewController.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		2D1B3B342658E6B10027C824 /* Nomad */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B3B3D2658E6CB0027C824 /* NomadViewController.swift */,
+			);
+			path = Nomad;
+			sourceTree = "<group>";
+		};
 		2D7CFA072658D8A500A4D823 = {
 			isa = PBXGroup;
 			children = (
 				2D7CFA122658D8A500A4D823 /* SafeNomad_iOS */,
+				2D1B3B332658E6A60027C824 /* Driver */,
+				2D1B3B342658E6B10027C824 /* Nomad */,
 				2D7CFA292658D8A600A4D823 /* SafeNomad_iOSTests */,
 				2D7CFA342658D8A700A4D823 /* SafeNomad_iOSUITests */,
 				2D7CFA112658D8A500A4D823 /* Products */,
@@ -143,7 +167,7 @@
 			children = (
 				2D7CFA472658DAA800A4D823 /* MainViewController.swift */,
 				2D7CFA4F2658DAB700A4D823 /* MainModel.swift */,
-				2D7CFA542658DAF300A4D823 /* MainModelView.swift */,
+				2D7CFA542658DAF300A4D823 /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -152,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7CFA5A2658DB1F00A4D823 /* GlobalAuth.swift */,
+				2D1B3B2B2658E40A0027C824 /* GlobalModel.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -286,12 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1B3B362658E6C20027C824 /* DriverViewController.swift in Sources */,
 				2D7CFA182658D8A500A4D823 /* ViewController.swift in Sources */,
-				2D7CFA552658DAF300A4D823 /* MainModelView.swift in Sources */,
+				2D7CFA552658DAF300A4D823 /* MainViewModel.swift in Sources */,
 				2D7CFA142658D8A500A4D823 /* AppDelegate.swift in Sources */,
 				2D7CFA162658D8A500A4D823 /* SceneDelegate.swift in Sources */,
 				2D7CFA5B2658DB1F00A4D823 /* GlobalAuth.swift in Sources */,
+				2D1B3B3E2658E6CB0027C824 /* NomadViewController.swift in Sources */,
 				2D7CFA502658DAB700A4D823 /* MainModel.swift in Sources */,
+				2D1B3B2C2658E40A0027C824 /* GlobalModel.swift in Sources */,
 				2D7CFA482658DAA800A4D823 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    var viewModel = MainViewModel()
     lazy var driverButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -36,8 +37,10 @@ class MainViewController: UIViewController {
         switch sender.titleLabel!.text{
         case "driver":
             //save user as driver
+            self.viewModel.saveUserType(with: .Driver)
             break
         case "nomad":
+            self.viewModel.saveUserType(with: .Nomad)
             //save user as nomad
             break
         case .none:
@@ -54,6 +57,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.viewModel.delegate = self
     }
     private func addViews(){
         self.view.addSubview(driverButton)
@@ -68,5 +72,15 @@ class MainViewController: UIViewController {
         nomadButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         nomadButton.leadingAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 10).isActive = true
         nomadButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
+    }
+}
+extension MainViewController: MainViewModelDelegate{
+    func moveAsNomad() {
+        let vc = NomadViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func moveAsDriver() {
+        let vc = DriverViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
