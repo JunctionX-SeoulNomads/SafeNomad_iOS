@@ -32,7 +32,7 @@ class NomadViewController: UIViewController {
     }
     @objc func shareLocation(){
         print("did called")
-        var requestBody = updateLocation()
+        let requestBody = updateLocation()
         self.viewModel.sendCurrentLocation(with: requestBody)
     }
     private func setLocation(){
@@ -40,8 +40,8 @@ class NomadViewController: UIViewController {
     }
     private func updateLocation() -> LocationRequest{
         if
-           CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-           CLLocationManager.authorizationStatus() ==  .authorizedAlways
+            locManager.authorizationStatus == .authorizedWhenInUse ||
+            locManager.authorizationStatus ==  .authorizedAlways
         {
             currentLocation = locManager.location!
         }

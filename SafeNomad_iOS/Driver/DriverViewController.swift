@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class DriverViewController: UIViewController {
     var gameTimer: Timer?
+    var locManager = CLLocationManager()
+    var currentLocation = CLLocation()
+    var viewModel = DriverViewModel()
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.setTimer()
@@ -16,6 +20,8 @@ class DriverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        viewModel.delegate = self
+        setLocation()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -26,5 +32,36 @@ class DriverViewController: UIViewController {
     }
     @objc func shareLocation(){
         print("did called")
+        let requestBody = updateLocation()
+        self.viewModel.sendCurrentLocation(with: requestBody)
+    }
+    private func setLocation(){
+        locManager.requestWhenInUseAuthorization()
+    }
+    private func updateLocation() -> DriverLocationRequest{
+        if
+            locManager.authorizationStatus == .authorizedWhenInUse ||
+            locManager.authorizationStatus ==  .authorizedAlways
+        {
+            currentLocation = locManager.location!
+        }
+        print(currentLocation.coordinate.longitude)
+        print(currentLocation.coordinate.latitude)
+        return DriverLocationRequest(latitude: currentLocation.coordinate.longitude, longitude: currentLocation.coordinate.latitude)
+    }
+}
+extension DriverViewController: DriverViewModelDelegate{
+    func showError() {
+        print("error")
+    }
+    
+    func showCritical() {
+        print("critical")
+    }
+    func showMedium() {
+        print("critical")
+    }
+    func showNormal() {
+        print("critical")
     }
 }
