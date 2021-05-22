@@ -1,0 +1,6 @@
+framework module Pods_SafeNomad_iOS {
+  umbrella header "Pods-SafeNomad_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
