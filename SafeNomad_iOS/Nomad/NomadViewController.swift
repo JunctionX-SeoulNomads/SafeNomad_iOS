@@ -36,7 +36,8 @@ class NomadViewController: UIViewController {
         self.viewModel.sendCurrentLocation(with: requestBody)
     }
     private func setLocation(){
-        locManager.requestWhenInUseAuthorization()
+        locManager.requestAlwaysAuthorization()
+        locManager.startUpdatingLocation()
     }
     private func updateLocation() -> LocationRequest{
         if
