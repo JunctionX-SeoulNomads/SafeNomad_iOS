@@ -13,7 +13,8 @@ class NomadViewController: UIViewController {
     var locManager = CLLocationManager()
     var currentLocation = CLLocation()
     var viewModel = NomadViewModel()
-    
+    var previousLocation = CLLocation(latitude: 0.0, longitude: 0.0)
+    var isFirst: Bool = true
     lazy var reportButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +61,20 @@ class NomadViewController: UIViewController {
     @objc func shareLocation(){
         print("did called")
         let requestBody = updateLocation()
-        self.viewModel.sendCurrentLocation(with: requestBody)
+        if self.isFirst{
+            self.viewModel.sendCurrentLocation(with: requestBody)
+            print("sent at first")
+            self.isFirst = false
+            self.previousLocation = CLLocation(latitude: requestBody.latitude, longitude: requestBody.longitude)
+        }else{
+            let newLocation = CLLocation(latitude: requestBody.latitude, longitude: requestBody.longitude)
+            let distanceInMeters = self.previousLocation.distance(from: newLocation)
+            guard distanceInMeters > 5 else {
+                return
+            }
+            print("sent")
+            self.viewModel.sendCurrentLocation(with: requestBody)
+        }
     }
     private func setLocation(){
         locManager.requestAlwaysAuthorization()
