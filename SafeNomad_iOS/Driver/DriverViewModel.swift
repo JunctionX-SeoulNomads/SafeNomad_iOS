@@ -9,9 +9,11 @@ import Foundation
 import Alamofire
 
 protocol DriverViewModelDelegate {
+    func showSuperCritical()
     func showCritical()
     func showMedium()
     func showNormal()
+    func showGood()
     func showError()
 }
 class DriverViewModel: NSObject{
@@ -42,15 +44,22 @@ class DriverViewModel: NSObject{
     private func handleResponse(with response: DriverLocationResponse){
         switch response.status{
         case 0:
-            self.delegate!.showNormal()
+            self.delegate!.showGood()
             break
         case 1:
+            self.delegate!.showNormal()
+            break
+        case 2:
             self.delegate!.showMedium()
             break
+        case 3:
+            self.delegate!.showCritical()
+            break
+        case 4:
+            self.delegate!.showSuperCritical()
         default:
             self.delegate!.showCritical()
             break
         }
     }
-    
 }
