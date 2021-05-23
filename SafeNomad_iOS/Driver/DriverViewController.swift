@@ -30,6 +30,18 @@ class DriverViewController: UIViewController {
         label.text = "Good"
         return label
     }()
+    lazy var parkButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .black
+        button.setTitle("End ride", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(parkButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    @objc func parkButtonPressed(){
+        self.viewModel.endParking(with: DriverLocationRequest(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude))
+    }
     override func loadView() {
         super.loadView()
         self.setViews()
@@ -42,6 +54,7 @@ class DriverViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         viewModel.delegate = self
+        viewModel.delegateParking = self
         setLocation()
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,6 +71,11 @@ class DriverViewController: UIViewController {
         statusLabel.topAnchor.constraint(equalTo: self.statusCircle.bottomAnchor, constant: 20).isActive = true
         statusLabel.centerXAnchor.constraint(equalTo: self.statusCircle.centerXAnchor).isActive = true
         statusLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8).isActive = true
+        self.view.addSubview(parkButton)
+        parkButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive  = true
+        parkButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+        parkButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+        parkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     private func setTimer(){
         self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(shareLocation), userInfo: nil, repeats: true)
@@ -117,4 +135,27 @@ extension DriverViewController: DriverViewModelDelegate{
         self.statusCircle.fadeTransition(0.3)
         self.statusLabel.fadeTransition(0.3)
     }
+}
+extension DriverViewController: DriverViewModelParkingDelegate{
+    func superBadParking() {
+        self.statusCircle.backgroundColor = #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)
+        self.statusLabel.text = "commonly visited area"
+        self.statusCircle.fadeTransition(0.3)
+        self.statusLabel.fadeTransition(0.3)
+    }
+    
+    func mediumParking() {
+        self.statusCircle.backgroundColor = .orange
+        self.statusLabel.text = "often visited area"
+        self.statusCircle.fadeTransition(0.3)
+        self.statusLabel.fadeTransition(0.3)
+    }
+    
+    func goodParking() {
+        self.statusCircle.backgroundColor = .green
+        self.statusLabel.text = "occasionally visited area"
+        self.statusCircle.fadeTransition(0.3)
+        self.statusLabel.fadeTransition(0.3)
+    }
+    
 }

@@ -46,6 +46,7 @@ class ReportViewController: UIViewController {
         self.viewModel.delegate = self
         self.view.backgroundColor = .white
         self.messageText.delegate = self
+        self.title = "Submit the report"
     }
     private func setViews(){
         self.view.addSubview(messageText)

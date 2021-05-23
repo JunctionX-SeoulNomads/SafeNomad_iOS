@@ -16,8 +16,15 @@ protocol DriverViewModelDelegate {
     func showGood()
     func showError()
 }
+protocol DriverViewModelParkingDelegate{
+    func superBadParking()
+    func mediumParking()
+    func goodParking()
+    func showError()
+}
 class DriverViewModel: NSObject{
     var delegate: DriverViewModelDelegate?
+    var delegateParking: DriverViewModelParkingDelegate?
     let headers: HTTPHeaders = [
       "Content-Type": "application/json; utf-8"
     ]
@@ -41,6 +48,26 @@ class DriverViewModel: NSObject{
             }
         }
     }
+    public func endParking(with location: DriverLocationRequest){
+        let param: [String: Any] = [
+            "longitude": location.longitude,
+            "latitude": location.latitude
+        ]
+        AF.request("https://safe-nomad.herokuapp.com/parking", method: .post,parameters: param, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 500).responseJSON { AFdata in
+            do {
+                guard let data = AFdata.value as? [String: Any] else{
+                    self.delegate!.showError()
+                    return
+                }
+                debugPrint(data as Any)
+                guard let status = data["status"] as? Int else{
+                    self.delegate!.showError()
+                    return
+                }
+                self.handleParkingResponse(with: DriverLocationResponse(status: status))
+            }
+        }
+    }
     private func handleResponse(with response: DriverLocationResponse){
         switch response.status{
         case 0:
@@ -59,6 +86,21 @@ class DriverViewModel: NSObject{
             self.delegate!.showSuperCritical()
         default:
             self.delegate!.showCritical()
+            break
+        }
+    }
+    private func handleParkingResponse(with response: DriverLocationResponse){
+        switch response.status{
+        case 0:
+            self.delegateParking!.goodParking()
+            break
+        case 1:
+            self.delegateParking!.mediumParking()
+            break
+        case 2:
+            self.delegateParking!.superBadParking()
+        default:
+            self.delegateParking!.superBadParking()
             break
         }
     }
