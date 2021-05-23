@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class GlobalAuth: NSObject{
     static var shared = GlobalAuth()
@@ -17,5 +18,15 @@ class GlobalAuth: NSObject{
             return "nomad"
         }
         return userType
+    }
+}
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
     }
 }
