@@ -54,6 +54,7 @@ class NomadViewController: UIViewController {
         reportButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         reportButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
         reportButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        self.title = "Hello, nomad!"
     }
     private func setTimer(){
         self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(shareLocation), userInfo: nil, repeats: true)

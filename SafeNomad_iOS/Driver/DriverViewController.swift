@@ -76,6 +76,7 @@ class DriverViewController: UIViewController {
         parkButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         parkButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
         parkButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        self.title = "Hello, driver!"
     }
     private func setTimer(){
         self.gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(shareLocation), userInfo: nil, repeats: true)
